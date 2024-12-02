@@ -61,7 +61,7 @@ hr {
     margin-bottom: 10px;
 }
 
-.aboutme, .project, .experiences, .education, .skill, .certification {
+.aboutme, .project, .experiences, .education, .skill, .certification, .organization {
     padding-left: 25px;
     padding-right: 25px;
 }
@@ -187,6 +187,7 @@ ol li, ul li {
     background-color: #f0f0f0;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 150px;
 }
 
 .tab-btn.active {
@@ -212,20 +213,51 @@ ol li, ul li {
 .tab-item img {
     width: 100%;
     position: relative;
+    height: auto;
 }
 
 .tab-item.active {
     display: block;
 }
-
+/*
 .tab-item:after {
     content: "Curriculum Vitae";
     position: absolute;
-    bottom: 10px;
-    right: 10px;
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 12px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    color: rgba(246, 18, 18, 0.5);
+    font-size: calc(500% + 1em); /* Menyesuaikan ukuran huruf dengan ukuran gambar *//*
+    font-weight: bold;
+    white-space: nowrap;
+    z-index: 10;
+    pointer-events: none;
+}*/
+
+.image-container {
+    position: relative;
+    display: inline-block; /* Agar container menyesuaikan ukuran gambar */
 }
+
+.image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-container::after {
+    content: "Certificate";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    color: rgba(237, 14, 14, 0.5);
+    font-size: calc(500% + 1em); /* Sesuaikan ukuran teks dengan dimensi gambar */
+    font-weight: bold;
+    white-space: nowrap;
+    pointer-events: none; /* Agar watermark tidak mengganggu interaksi */
+}
+
 
 
 footer {
@@ -312,4 +344,25 @@ footer {
     margin-top: 20px;
     font-size: 14px;
     color: #aaa;
+}
+
+.organization {
+    text-align: justify;
+}
+
+.organization-container {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.organization-item {
+    flex: 1;
+}
+
+.organization-container img {
+    width: 300px;
+    padding: 20px;
 }
