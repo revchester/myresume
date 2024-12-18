@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {/*
+    font-family: "Agency FB";
+    src: url(../font/AGENCYB.TTF);*/
+    font-family: "Azeret Mono";
+    src: url(../font/AzeretMono[wght].ttf);
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-size: 10pt;
+    font-family: "Azeret Mono", sans-serif;
+}
+
+h1 {
+    color: yellow;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 10pt;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #fe0505;
+}
+
+span {
+    color: orange;
+    font-size: 14pt;
+}
+
+hr {
+    border: 2px solid red;
+    width: 90%;
+    margin: 10px auto;
+}
+
+h2 {
+    color: cornflowerblue;
+}
+
+h3 {
+    color: gold;
+}
+
+h4 {
+    color: palegreen;
+}
+
+ul, ol {
+    padding-left: 20px;
+}
+
+li {
+    padding-left: 20px;
+}
+
+.container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.container-item {
+    display: flex;
+    gap: 10px; /* Jarak antar elemen */
+    background-color: #414346;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content-center {
+    text-align: center;
+    flex: auto; /* Membagi lebar elemen secara rata */
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.content-justify {
+    text-align: justify;
+    flex: auto; /* Membagi lebar elemen secara rata */
+    padding: 20px;
+    margin: 0 auto;
+}
+
+#skill, #panterafisip {
+    display: flex;
+    justify-content: center; /* Pusatkan horizontal */
+    align-items: center;     /* Pusatkan vertikal */
+    height: 100%;            /* Pastikan tinggi #skill memenuhi parent */
+    width: 100%;
+    text-align: center;      /* Memastikan konten tetap di tengah */
+}
+
+#skill img {
+    width: 64px; /* Ukuran gambar */
+    margin: 0 auto;
+    border-radius: 50%;
+    filter: grayscale(100%);
+}
+
+#skill img:hover {
+    filter: grayscale(0);
+}
+
+#panterafisip img {
+    width: 350px;
+    margin: 0 auto;
+    filter: grayscale(100%);
+}
+
+#panterafisip img:hover {
+    filter: grayscale(0);
+}
+
+.content-left {
+    text-align: left;
+    flex: 1;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/*  scroll bar start    */
+/* Mengatur lebar scrollbar pada elemen */
+::-webkit-scrollbar {
+    width: 2px;  /* Lebar scrollbar vertikal */
+    height: 2px; /* Lebar scrollbar horizontal */
+}
+
+/* Mengatur warna track (jalur) scrollbar */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Warna track */
+}
+
+/* Mengatur warna dan tampilan thumb (pegangan) scrollbar */
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5); /* Warna thumb */
+    border-radius: 10px;  /* Membuat sudutnya membulat */
+}
+
+/* Scrollbar untuk browser non-WebKit */
+.scrollbar {
+    scrollbar-width: thin; /* Untuk Firefox */
+    scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+/*  scroll bar ends     */
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;/*
+    background-color: #333; /* Warna latar belakang tabel */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada tabel */
+    table-layout: auto;
+}
+
+table, th, td {
+    border: 2px solid rgb(214, 161, 27);
+}
+
+th {
+    background-color: goldenrod;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+th, td {
+    padding: 10px;
+}
+
+.social-links {/*
+    justify-content: center;*/
+    gap: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.social-links a {
+    font-size: 28px;
+    color: #fff;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #f0ad4e;
+    transform: scale(1.1);
+}
+
+.powered-by {
+    text-align: center;
+}
+
+.powered-by img {
+    height: 50px;
+    width: auto;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #f0ad4e;
+    filter: grayscale(100%);
+}
+
+.powered-by img:hover {
+    filter: grayscale(0);
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.tab-container {
+    max-width: max-content;
+    margin: auto;
+    text-align: center;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 150px;
+}
+
+.tab-btn.active {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.tab-btn:not(:last-child) {
+    border-right: none;
+}
+
+.tab-content {
+    position: relative;
+    border: 1px solid red;
+    padding: 10px;
+    background-color: black;
+}
+
+.tab-item {
+    display: none;
+}
+
+.tab-item img {
+    width: 100%;
+    position: relative;
+    height: auto;
+}
+
+.tab-item.active {
+    display: block;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block; /* Agar container menyesuaikan ukuran gambar */
+}
+
+.image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+}
+
+.image-container img:hover {
+    filter: grayscale(0);
+}
+
+.image-container::after {
+    content: "Certificate";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    color: rgba(237, 14, 14, 0.5);
+    font-size: calc(500% + 1em); /* Sesuaikan ukuran teks dengan dimensi gambar */
+    font-weight: bold;
+    white-space: nowrap;
+    pointer-events: none; /* Agar watermark tidak mengganggu interaksi */
+}

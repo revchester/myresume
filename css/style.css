@@ -66,6 +66,21 @@ hr {
     padding-right: 25px;
 }
 
+.aboutme h2,
+.project h2,
+.experiences h2,
+.education h2,
+.skill h2,
+.certification h2,
+.organization h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.aboutme p {
+    text-align: justify;
+}
+
 table {
     margin: 20px auto;
     border-collapse: collapse;/*
@@ -88,10 +103,6 @@ th {
 
 th, td {
     padding: 10px;
-}
-
-.aboutme {
-    text-align: center;
 }
 
 .experiences {
