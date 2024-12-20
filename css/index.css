@@ -102,11 +102,17 @@ li {
     text-align: center;      /* Memastikan konten tetap di tengah */
 }
 
+.skill {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
 #skill img {
-    width: 64px; /* Ukuran gambar */
-    margin: 0 auto;
+    width: 85px; /* Ukuran gambar */
+    margin: 25px 25px;
     border-radius: 50%;
     filter: grayscale(100%);
+
 }
 
 #skill img:hover {
