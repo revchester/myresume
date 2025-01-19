@@ -1305,7 +1305,7 @@ ol ol, ol ul { margin: 6px 0 6px 30px; }
    RESUME SECTION
    ============================ */
 #resume {
-    background: #2B2B2B;
+    background: #4f2801;
     padding: 10px 0;
     overflow: hidden;
     color: #ffffff;
@@ -1332,7 +1332,7 @@ ol ol, ol ul { margin: 6px 0 6px 30px; }
     display: flex;
     align-items: center;
     gap: 30px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(5, 4, 4, 0.479);
     padding: 20px;
     border-radius: 8px;
 }
