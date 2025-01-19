@@ -1167,7 +1167,9 @@ h3.spec {
 .collapse.in {
     height: auto;
 }
+/*  ends accordion   */
 
+/*
 #resume {
     background: #2B2B2B;
     padding-top: 26px;
@@ -1294,7 +1296,144 @@ ol ol, ol ul { margin: 6px 0 6px 30px; }
 }
 
 [class*="column"] + [class*="column"]:last-child { float: right; }
-[class*="column"] + [class*="column"].end { float: right; }
+[class*="column"] + [class*="column"].end { float: right; }*/
+
+/*  ends resume   */
+
+/*  resume diff style  */
+/* ============================
+   RESUME SECTION
+   ============================ */
+#resume {
+    background: #2B2B2B;
+    padding: 10px 0;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+/* Style untuk judul */
+#resume .section-title h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* === FLEXBOX LAYOUT === */
+.org-exp {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    border-bottom: 1px solid #E8E8E8;
+    padding-bottom: 20px;
+}
+
+/* === LAYOUT ORGANIZATION BOX === */
+.org-exp > div {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* == BAGIAN LOGO == */
+.header-col {
+    flex: 1;
+    max-width: 22%;
+    text-align: center;
+}
+
+.header-col h1 {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* STYLE LOGO */
+.pantera img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* == BAGIAN DESKRIPSI == */
+.main-col {
+    flex: 3;
+    max-width: 70%;
+}
+
+.main-col h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.main-col p {
+    margin: 0 0 15px;
+    font-size: 15px;
+}
+
+/* STYLE UNTUK INFO ORGANIZATION */
+.info {
+    font-size: 15px;
+    color: #c1cad2;
+}
+
+.info span {
+    margin: 0 5px;
+}
+
+.date {
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* STYLE LIST (UL) */
+.main-col ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.main-col ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.main-col ul li::before {
+    content: "•";
+    color: #11ABB0;
+    position: absolute;
+    left: 0;
+    font-size: 18px;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+    .org-exp > div {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .header-col {
+        max-width: 100%;
+    }
+
+    .main-col {
+        max-width: 100%;
+    }
+
+    .pantera img {
+        max-width: 100px;
+    }
+}
+
+/*  ends resume diff style  */
 
 /* footer section*/
 .footer_section {
