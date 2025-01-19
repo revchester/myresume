@@ -52,19 +52,6 @@ p {
 	line-height:1.5;
 }
 
-/*
-[class*="span"] {
-    float: left;
-    min-height: 1px;
-    margin-left: 20px;
-    background-image: url(../image/wallpaper/w-05.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-attachment: scroll;
-}
-*/
-
 ul,
 ol {
   padding: 0;
@@ -96,60 +83,152 @@ ol.inline > li {
     *zoom: 1;
 }
 
+/* Header Section */
+.hero_area {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero_area .hero_bg_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.hero_area .hero_bg_box img {
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.hero_area .hero_bg_box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
+}
+
+.header_section .header_top {
+    padding: 15px 0;
+    border-bottom: 1px solid #ffffff;
+}
+
+.header_section .header_top_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact_nav {
+    display: flex;
+    gap: 10px;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.contact_nav a {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.contact_nav a i {
+    margin-right: 5px;
+    background-color: #159ec0;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    border-radius: 50%;
+}
+
+.contact_nav a:hover i {
+    background-color: #2c7873;
+}
+
+.social_box {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    min-width: 200px;
+}
+
+.social_box a i {
+    background-color: #159ec0;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    border-radius: 50%;
+}
+
+.social_box a:hover i {
+    background-color: #2c7873;
+}
+
+.header_bottom {
+    padding: 15px 0;
+}
+
+.header_bottom .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Memisahkan kiri dan kanan */
+    gap: 15px;
+}
+
+.navbar-brand {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 24px;
+    flex-grow: 1; /* Membiarkan "Curriculum Vitae" tetap di kiri */
+}
+
+.navbar-brand span {
+    color: #2c7873;
+}
+
+.navbar-brand:hover {
+    color: inherit;
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-link:hover {
+    color: #2c7873;
+}
+
 /* Header Styles */
 header {
     background-color: #ffffff;
     background-image: url(../image/wallpaper/w-001.jpg);
     border-bottom: 2px solid #ddd;
     padding: 10px 20px;
-}
-
-/* Top bar */
-.top-bar {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #ddd;
-    background-color: black;
-}
-
-.contact-info, .social-icons {
-    display: flex;
-    gap: 10px;
-}
-
-.contact-info a, .social-icons a {
-    color: #f8f4f4;
-}
-
-.contact-info a:hover, .social-icons a:hover {
-    color: #f50808;
-}
-
-/* Main header */
-.main-header {
-    text-align: center;
-}
-
-.main-header h1 {
-    font-size: 24px;
-    color: white;
-}
-
-.main-header nav {
-    margin: 0 15px;
-}
-
-.main-header nav a {
-    margin: 0 10px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #eaeff4;
-}
-
-.main-header nav a:hover {
-    color: #b31500;
 }
 
 /* Tooltip Styles */
@@ -341,7 +420,7 @@ main {
 .intro {
 	display:table;
 	width:100%;
-	height:auto;
+	min-height: calc(100vh - 150px);
 	padding:100px 0 100px 0;
 	text-align:center;
 	color:#fff;
@@ -515,6 +594,7 @@ figure {
 ==========================================*/
 
 .works {
+    background-color: #2f1f00;
     background-image: url(../image/wallpaper/w-03.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -1245,37 +1325,40 @@ ol ol, ol ul { margin: 6px 0 6px 30px; }
     background-attachment: scroll;
 }
 
-/* Mengatur info-row agar tersusun dalam satu baris */
+/* Struktur utama info-section */
 .info_section .info_top .info-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 20px;
 }
 
 /* Navbar Brand */
 .navbar-brand {
     color: #ffffff;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 26px;
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
 }
 
 .navbar-brand span {
     color: #2c7873;
+    font-size: 22px;
 }
 
 .navbar-brand:hover {
     color: inherit;
 }
 
-/* Mengatur info kontak agar lebih rapi */
+/* Mengatur Info Kontak */
 .info_section .info_contact {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    align-items: flex-start;
+    gap: 10px;
 }
 
 .info_section .info_contact a {
@@ -1283,80 +1366,88 @@ ol ol, ol ul { margin: 6px 0 6px 30px; }
     align-items: center;
     color: #ffffff;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.info_section .info_contact a:hover {
+    color: #f0ad4e;
 }
 
 .info_section .info_contact a i {
-    margin-right: 8px;
-    font-size: 20px;
+    margin-right: 10px;
+    font-size: 22px;
 }
 
-/* Container umum */
+/* Container utama */
 .container-info {
     width: 100%;
-    padding: 0 25px;
-    margin-right: auto;
-    margin-left: auto;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
 }
 
-/* Mengatur sosial media agar tetap rapi dan rata kanan */
+/* Social Media */
 .info_section .social_box {
     display: flex;
     justify-content: flex-end;
-    gap: 10px;
+    gap: 12px;
 }
 
 .info_section .social_box a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 45px;
-    height: 45px;
-    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10%;
     color: #ffffff;
     background: rgba(255, 255, 255, 0.2);
     transition: background 0.3s ease-in-out, transform 0.2s;
 }
 
 .info_section .social_box a:hover {
-    background: #ffffff;
+    background: #f0ad4e;
     color: #004445;
     transform: scale(1.1);
 }
 
-/* Mengatur bagian info bottom agar lebih rata */
+/* Mengatur bagian bawah info */
 .info_section .info_bottom {
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .info_section .info_bottom .info-row {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 20px;
-    align-items: center;
+    gap: 25px;
+    align-items: flex-start;
 }
 
-/* Style untuk masing-masing detail */
+/* Detail informasi */
 .info_section .info_detail {
-    text-align: justify;
     flex: 1;
     min-width: 250px;
 }
 
-/* Mengatur Powered by agar lebih rapi */
+.full_address {
+    max-width: 450px;
+}
+
+/* Powered by */
 .powered-by {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 15px;
     flex-wrap: wrap;
 }
 
 .powered-by img {
-    height: 40px;
+    height: 45px;
     width: auto;
     border-radius: 5px;
-    border: 1px solid #f0ad4e;
+    border: 2px solid #f0ad4e;
     filter: grayscale(100%);
     transition: filter 0.3s ease-in-out, transform 0.2s;
 }
@@ -1366,12 +1457,13 @@ ol ol, ol ul { margin: 6px 0 6px 30px; }
     transform: scale(1.05);
 }
 
-/* Mengatur menu Useful Links */
+/* Useful Links */
 .info_section .info_menu {
     display: flex;
     flex-direction: column;
+    gap: 12px;
     padding-left: 0;
-    gap: 10px;
+    width: 180px; /* Lebar lebih kecil agar tampilan lebih ringkas */
 }
 
 .info_section .info_menu li {
@@ -1420,5 +1512,22 @@ ol ol, ol ul { margin: 6px 0 6px 30px; }
 
     .powered-by {
         justify-content: center;
+    }
+}
+
+/* RESPONSIF UNTUK LAYAR KECIL */
+@media screen and (max-width: 768px) {
+    .info_section .info_bottom .info-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .full_address {
+        width: 100%; /* Lebar full untuk tampilan mobile */
+    }
+
+    .info_section .info_menu {
+        width: 100%; /* Lebar full agar tetap responsif */
+        align-items: center;
     }
 }
