@@ -19,31 +19,40 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 </head>
 <body>
-    <header id="home">
-        <div class="top-bar">
-            <div class="contact-info">
-                <a href="https://maps.app.goo.gl/5RKpkTnFmKfUaWdEA" target="_blank"><i class="fa-solid fa-location-dot"></i> Batam Center - Kota Batam | Kepulauan Riau - 29464</a> |
-                <a href="https://wa.me/6282173761982" target="_blank"><i class="fa-brands fa-whatsapp"></i> +62 821 7376 1982</a> |
-                <a href="amalrahmanduya@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i> amalrahmanduya@gmail.com</a>
-            </div>
-            <div class="social-icons">
-                <a href="https://web.facebook.com/revardy.d.caesar/" target="_blank" class="tooltip" data-title="Facebook"><i class="fa-brands fa-facebook"></i></a>
-                <a hidden style="display: none;" href="https://www.linkedin.com/in/amal-rahman-duya-897a59136/" target="_blank" class="tooltip" data-title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/revchester" target="_blank" class="tooltip" data-title="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a hidden style="display: none;" href="mailto:amalrahmanduya@gmail.com" target="_blank" class="tooltip" data-title="Gmail"><i class="fa-brands fa-google"></i></a>
-                <a hidden style="display: none;" href="https://wa.me/6282173761982" target="_blank" class="tooltip" data-title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-                <a href="https://drive.google.com/drive/folders/14fjDshI3mniwpq1Tg1RJPZZhmoFhnO42?usp=sharing" class="tooltip" target="_blank" data-title="G-Drive"><i class="fa-brands fa-google-drive"></i></a>
-            </div>
+    <div id="home" class="hero_area">
+        <div class="hero_bg_box">
+            <img src="./image/wallpaper/w-001.jpg" alt="">
         </div>
-        <div class="main-header">
-            <h1>Curri<strong>culum </strong> &nbsp;&nbsp;&nbsp;<span>Vitae</span></h1>
-            <nav>
-                <a href="#home"><i class="fa-solid fa-house-user"></i>&nbsp;&nbsp;&nbsp;Home</a> |
-                <a href="https://www.linkedin.com/in/amal-rahman-duya-897a59136/" target="_blank"><i class="fa-brands fa-linkedin"></i>&nbsp;&nbsp;&nbsp;LinkedIn</a> |
-                <a href="https://revchester.github.io/myportfolio/"><i class="fa-brands fa-usps"></i>&nbsp;&nbsp;&nbsp;My Portfolio</a>
-            </nav>
-        </div>
-    </header>
+        <!-- header section start -->
+        <header class="header_section">
+            <div class="header_top">
+                <div class="container-fluid header_top_container">
+                    <div class="contact_nav">
+                        <a href="https://maps.app.goo.gl/5RKpkTnFmKfUaWdEA" target="_blank"><i class="fa-solid fa-location-dot"></i> Batam Center - Kota Batam | Kepulauan Riau - 29464</a>
+                        <a href="https://wa.me/6282173761982" target="_blank"><i class="fa-brands fa-whatsapp"></i> +62 821 7376 1982</a>
+                        <a href="amalrahmanduya@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i> amalrahmanduya@gmail.com</a>
+                    </div>
+                    <div class="social_box">
+                        <a href="https://web.facebook.com/revardy.d.caesar/" target="_blank" class="tooltip" data-title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a hidden style="display: none;" href="https://www.linkedin.com/in/amal-rahman-duya-897a59136/" target="_blank" class="tooltip" data-title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/revchester" target="_blank" class="tooltip" data-title="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a hidden style="display: none;" href="mailto:amalrahmanduya@gmail.com" target="_blank" class="tooltip" data-title="Gmail"><i class="fa-brands fa-google"></i></a>
+                        <a hidden style="display: none;" href="https://wa.me/6282173761982" target="_blank" class="tooltip" data-title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://drive.google.com/drive/folders/14fjDshI3mniwpq1Tg1RJPZZhmoFhnO42?usp=sharing" class="tooltip" target="_blank" data-title="G-Drive"><i class="fa-brands fa-google-drive"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="header_bottom">
+                <div class="container-fluid">
+                    <a class="navbar-brand " href="index.html">Curri<strong>culum </strong><span>Vitae</span></a>
+                    <a class="nav-link" href="index.html"><i class="fa-solid fa-house-user"></i>&nbsp;&nbsp;&nbsp;Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="https://www.linkedin.com/in/amal-rahman-duya-897a59136/"><i class="fa-brands fa-linkedin"></i>&nbsp;&nbsp;&nbsp;LinkedIn</a>
+                    <a class="nav-link" href="https://revchester.github.io/myportfolio/"><i class="fa-brands fa-usps"></i>&nbsp;&nbsp;&nbsp;My Portfolio</a>
+                </div>
+            </div>
+        </header>
+        <!-- header section ends -->
+    </div>
     <section class="intro">
         <div class="intro-body">
             <div class="container">
@@ -787,10 +796,12 @@
                 <div class="info-row">
                     <!-- Full Address -->
                     <div class="info_detail">
-                        <h5>Full Address :</h5>
-                        <p>Kelurahan Belian <span>|</span> Kec. Batam Kota / Batam Center <span>|</span> Kota Batam <span>|</span> Prov. Kepulauan Riau. <span>|</span> 29464</p>
+                        <div class="full_address">
+                            <h5>Full Address :</h5>
+                            <p>Kelurahan Belian <span>|</span> Kec. Batam Kota / Batam Center <span>|</span> Kota Batam <span>|</span> Prov. Kepulauan Riau. <span>|</span> 29464</p>
+                        </div>
                     </div>
-            
+
                     <!-- Powered by -->
                     <div class="info_detail">
                         <h5>Powered by:</h5>
@@ -800,7 +811,7 @@
                             <img src="./image/powered-by/vsc.jpg" alt="Visual Studio Code">
                         </div>
                     </div>
-            
+                
                     <!-- Useful links -->
                     <div class="info_detail">
                         <h5>Useful Links</h5>
